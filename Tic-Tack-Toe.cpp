@@ -1,0 +1,75 @@
+
+#include <iostream>
+#include <string>
+#include <>
+#include <iomanip>
+    
+    using namespace std;
+    
+    void board();
+    
+    int main()
+    {
+        string player1 = ""; // Player ones name
+        string player2 = ""; // Player twos name
+        
+        int firstPlayer = 0; // What player is going first
+        
+        char player1Piece = ' '; // Player ones game piece
+        char player2Piece = ' '; // Player twos game piece
+        
+        // Prompt users to enter their names
+        cout << "Player 1, please enter your name : ";
+        cin  >> player1;
+        cout << endl;
+        
+        cout << "Player 2. please enter your name : ";
+        cin  >> player2;
+        cout << endl << endl;
+        
+        system("cls");
+        
+        // Ask who is going first
+        cout << "Who is going first?" << endl;
+        cout << "Enter 1 for " << player1 << ", or enter 2 for " << player2 << endl;
+        cin  >> firstPlayer;
+        cout << endl << endl;
+        
+        if (firstPlayer == player1){
+            
+        }
+        else if (firstPlayer == player2){
+            
+        }
+        
+        Sleep(300);
+        system("cls");
+        
+        // Get the users game piece
+        cout << player1 << ", you have the choice of game piece." << endl;
+        cout << player1 << ", please enter your game piece : " << endl;
+        cin  >> player1Piece;
+        cout << endl << endl;
+        
+        Sleep(300);
+        system("cls");
+        
+        // Tell users what their game pieces are
+        cout << player1 << "s gamepiece is " << player1Piece << endl;
+        cout << player2 << "s gamepiece is " << player2Piece << endl;
+        
+        
+        return 0;
+    }
+    
+    void board()
+    {
+        cout << setw(3)   << setfill(' ') << ' ' << setw(4) << left << '|' << right << '|' << endl;
+        cout << setw (11) << setfill('-') << '-' << endl; // NOT NEEDED FOR SCORING
+        cout << setw(3)   << setfill(' ') << ' ' << setw(4) << left << '|' << right << '|' << endl;
+        cout << setw (11) << setfill('-') << '-' << endl; // NOT NEEDED FOR SCORING
+        cout << setw(3)   << setfill(' ') << ' ' << setw(4) << left << '|' << right << '|' << endl;
+    }
+    
+    return 0;
+}
