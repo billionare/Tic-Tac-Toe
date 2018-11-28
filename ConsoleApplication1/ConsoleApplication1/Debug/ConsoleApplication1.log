@@ -1,3 +1,2 @@
-﻿  pch.cpp
-  ConsoleApplication1.cpp
-c:\users\scott\desktop\coding\github-repos\tic-tac-toe\consoleapplication1\consoleapplication1\consoleapplication1.cpp(195): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+﻿  ConsoleApplication1.cpp
+  ConsoleApplication1.vcxproj -> C:\Users\Scott\Desktop\coding\github-repos\Tic-Tac-Toe\ConsoleApplication1\Debug\Tic-Tac-Toe.exe
