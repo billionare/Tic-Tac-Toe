@@ -3,29 +3,31 @@
 
  Due date: Nov 28 2018
 
- Description: Prompt the user to enter their name, and player piece, then asks them 
+ Description: Prompt the user to enter their name, and player piece, then asks them where they want to go.
+ 			  The program then checks whether or not 
  
 */
-#include <iostream>
-#include <string>
-#include <windows.h>
-#include <iomanip>
+#include <iostream>  
+#include <string>    // Player names
+#include <windows.h> // Sleep, cls, handling hConsole
+#include <iomanip>   // Game board
 
 using namespace std;
 
 int main(){
     
-    string player1    = " ";
-    string player2    = " ";
+    string player1    = " "; // Player ones name
+    string player2    = " "; // Player twos name
     
-    int turn          = 0;
-    int X             = 0;
-    int Y             = 0;
+    int turn          = 0; // Whos turn is it to play. (Check by modulus of two)
+    int X             = 0; // The boards X axis
+    int Y             = 0; // The boards Y axis
     
-    char player1Piece = ' ';
-    char player2Piece = ' ';
-    char place        = ' ';
+    char player1Piece = ' '; // Player ones game piece
+    char player2Piece = ' '; // Player twos game piece
+    char place        = ' '; // Where the user wants to go
 
+    // All of these variables are for the board
     char square1_1    = ' ';
     char square1_2    = ' ';
     char square1_3    = ' ';
@@ -35,6 +37,7 @@ int main(){
     char square3_1    = ' ';
     char square3_2    = ' ';
     char square3_3    = ' ';
+    // ----------------------------------------
     
 	bool won = false;
 
@@ -63,17 +66,20 @@ int main(){
     
     cout << endl << endl << "Player 2, please enter your name: ";
     cin >> player2;
+    
     cout <<"player 2, please choose game piece: ";
     cin >> player2Piece;
     
     system("cls");
     
+    // Do the program once, then check if the user wants if they want to play again
 	do
 	{
 
 		cout << endl << endl << "(type in 1 for player 1 or 2 for player 2) Who would like to go first?";
 		cin >> turn;
 
+		// Checking if the user doesn't enter one or two
 		while (turn != 1 && turn != 2) {
 			SetConsoleTextAttribute(hConsole, 4);
 
@@ -216,6 +222,7 @@ int main(){
 
 		}
 
+		// Ask the user if he would like to play again
 		cout << "Thank you for playing Tic Tac Toe. Would you like to play again? (y/n) ";
 		cin >> place;
 
